@@ -74,7 +74,7 @@ const Footer = () => {
 			</div>
 		</div>
 	</div>
-<div className="py-6 text-sm text-center dark:text-gray-600">© <span>{moment().format("YYYY")}</span> Craftopia Creations. All rights reserved.</div>
+<div className="py-6 text-sm text-center dark:text-gray-600">© <span>{moment().format("YYYY")}</span> Artistic. All rights reserved.</div>
 
 </footer>
     );
