@@ -10,6 +10,7 @@ import AllCraftsItems from "../Pages/AllCraftsItems";
 import MyArt from "../Pages/MyArt";
 import UpdateArt from "../Pages/UpdateArt";
 import ViewDetails from "../Pages/ViewDetails";
+import PrivateRoute from '../components/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/addArtsItem",
-        element: <AddCraftsItem></AddCraftsItem>,
+        element: <PrivateRoute><AddCraftsItem></AddCraftsItem></PrivateRoute>,
       },
       {
         path: "/allArtsItems",
@@ -39,11 +40,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/myArt&CraftList",
-        element: <MyArt></MyArt>,
+        element: <PrivateRoute><MyArt></MyArt></PrivateRoute>,
       },
       {
         path: "/updateArt/:id",
-        element: <UpdateArt></UpdateArt>,
+        element: <PrivateRoute> <UpdateArt></UpdateArt></PrivateRoute>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/crafts/${params.id}`).then((res) =>
             res.json()
@@ -51,7 +52,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/allArtsItems/viewDetails/:id",
-        element: <ViewDetails></ViewDetails>,
+        element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/crafts/${params.id}`).then((res) =>
             res.json()
@@ -59,7 +60,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/viewDetails/:id",
-        element: <ViewDetails></ViewDetails>,
+        element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/crafts/${params.id}`).then((res) =>
             res.json()
