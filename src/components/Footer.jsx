@@ -12,7 +12,7 @@ const Footer = () => {
 				<div className="flex items-center justify-center w-10 h-10 rounded-full dark:bg-violet-600">
 			<img src={logo} alt="" />
 				</div>
-					<span className="self-center text-2xl font-semibold text-primary">Craftopia <span className="text-secondary">Creations </span></span>
+					<span className="self-center text-2xl font-semibold text-primary">Artistic</span>
 			</a>
 		</div>
 		<div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">

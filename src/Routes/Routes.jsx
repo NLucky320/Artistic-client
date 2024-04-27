@@ -7,6 +7,8 @@ import Root from "../Layout/Root";
 import ErrorPage from "../Pages/ErrorPage";
 import AddCraftsItem from "../Pages/AddCraftsItem";
 import AllCraftsItems from "../Pages/AllCraftsItems";
+import MyArt from "../Pages/MyArt";
+import UpdateArt from "../Pages/UpdateArt";
 
 
 const router = createBrowserRouter([
@@ -29,12 +31,21 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: 'addCraftsItem',
+        path: 'addArtsItem',
         element:<AddCraftsItem></AddCraftsItem>
       },
       {
-        path: '/allCraftsItems',
+        path: '/allArtsItems',
         element: <AllCraftsItems></AllCraftsItems>
+      },
+      {
+        path: '/myArt&CraftList',
+        element:<MyArt></MyArt>
+      },
+      {
+        path: '/updateArt/:id',
+        element: <UpdateArt></UpdateArt>,
+        loader: ({ params }) => fetch(`http://localhost:5000/crafts/${params.id}`)
       }
     ],
   },
