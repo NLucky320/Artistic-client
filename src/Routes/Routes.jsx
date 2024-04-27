@@ -6,6 +6,7 @@ import Register from "../Pages/Register";
 import Root from "../Layout/Root";
 import ErrorPage from "../Pages/ErrorPage";
 import AddCraftsItem from "../Pages/AddCraftsItem";
+import AllCraftsItems from "../Pages/AllCraftsItems";
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: 'addCraftsItem',
         element:<AddCraftsItem></AddCraftsItem>
+      },
+      {
+        path: '/allCraftsItems',
+        element: <AllCraftsItems></AllCraftsItems>
       }
     ],
   },

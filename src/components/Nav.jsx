@@ -73,7 +73,7 @@ const Nav = () => {
         className="p-1 font-normal"
       >
         <NavLink
-          to="/allCraftItem"
+          to="/allCraftsItems"
           className={({ isActive }) =>
             isActive ? "text-primary font-bold" : "font-bold"
           }
