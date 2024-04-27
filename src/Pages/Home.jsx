@@ -4,6 +4,7 @@ import Banner from '../components/Banner';
 import CraftsItems from '../components/CraftsItems';
 import OurServices from '../components/OurServices';
 import Blogs from '../components/Blogs';
+import ArtCategories from '../components/ArtCategories';
 
 const Home = () => {
     return (
@@ -13,8 +14,11 @@ const Home = () => {
             </Helmet>
             <Banner></Banner>
             <CraftsItems></CraftsItems>
+        <ArtCategories></ArtCategories>
             <OurServices></OurServices>
             <Blogs></Blogs>
+            
+            
         </div>
     );
 };
