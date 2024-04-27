@@ -9,7 +9,7 @@ import AddCraftsItem from "../Pages/AddCraftsItem";
 import AllCraftsItems from "../Pages/AllCraftsItems";
 import MyArt from "../Pages/MyArt";
 import UpdateArt from "../Pages/UpdateArt";
-
+import ViewDetails from "../Pages/ViewDetails";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +21,6 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
-    
       {
         path: "/login",
         element: <Login></Login>,
@@ -31,23 +30,43 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: 'addArtsItem',
-        element:<AddCraftsItem></AddCraftsItem>
+        path: "/addArtsItem",
+        element: <AddCraftsItem></AddCraftsItem>,
       },
       {
-        path: '/allArtsItems',
-        element: <AllCraftsItems></AllCraftsItems>
+        path: "/allArtsItems",
+        element: <AllCraftsItems></AllCraftsItems>,
       },
       {
-        path: '/myArt&CraftList',
-        element:<MyArt></MyArt>
+        path: "/myArt&CraftList",
+        element: <MyArt></MyArt>,
       },
       {
-        path: '/updateArt/:id',
+        path: "/updateArt/:id",
         element: <UpdateArt></UpdateArt>,
-        loader: ({ params }) => fetch(`http://localhost:5000/crafts/${params.id}`)
-      }
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/crafts/${params.id}`).then((res) =>
+            res.json()
+          ),
+      },
+      {
+        path: "/allArtsItems/viewDetails/:id",
+        element: <ViewDetails></ViewDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/crafts/${params.id}`).then((res) =>
+            res.json()
+          ),
+      },
+      {
+        path: "/viewDetails/:id",
+        element: <ViewDetails></ViewDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/crafts/${params.id}`).then((res) =>
+            res.json()
+          ),
+      },
     ],
   },
 ]);
+
 export default router;

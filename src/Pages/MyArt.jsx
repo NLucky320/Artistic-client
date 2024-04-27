@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useAuth from "../Hooks/useAuth";
 import { IoPricetag } from "react-icons/io5";
-import { AiOutlineStock } from "react-icons/ai";
 import { FcRating } from "react-icons/fc";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";

@@ -10,7 +10,7 @@ const CraftsItem = ({craftsItem}) => {
 	</div>
             <p className="dark:text-gray-800">{craftsItem.short_description}</p>
             <div>
-                 <a href={`viewDetails/${craftsItem.id}`} className="btn flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-primary hover:bg-secondary text-white">View Details</a>
+                 <a href={`/viewDetails/${craftsItem._id}`} className="btn flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-primary hover:bg-secondary text-white">View Details</a>
            </div>
 </div>
     );
