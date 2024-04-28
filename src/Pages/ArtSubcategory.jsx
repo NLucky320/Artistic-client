@@ -8,7 +8,7 @@ const ArtSubcategory = () => {
     const [items, setItems] = useState([]);
    
     useEffect(() => {
-        fetch(`http://localhost:5000/subcategory/${subcategory_Name}`)
+        fetch(`https://assignment-10-server-liart-ten.vercel.app/subcategory/${subcategory_Name}`)
             .then((res) => res.json())
             .then((data) => {
                 setItems(data);
@@ -16,7 +16,7 @@ const ArtSubcategory = () => {
             .catch(error => console.error('Error fetching subcategory data:', error)); // Adding error handling
     }, [subcategory_Name]); // Adding subcategory_Name to the dependency array
     
-    console.log(items);
+    // console.log(items);
     return (
         <div>
                 {items?.map((item) => (

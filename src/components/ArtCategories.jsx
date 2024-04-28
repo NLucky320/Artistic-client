@@ -5,7 +5,7 @@ const ArtCategories = () => {
        const [craftsCategories, setCraftsCategories] = useState([]);
    
     useEffect(() => {
-     fetch("http://localhost:5000/artsubcategory")
+     fetch("https://assignment-10-server-liart-ten.vercel.app/artsubcategory")
       .then((res) => res.json())
       .then((data) => setCraftsCategories(data));
     }, [])
