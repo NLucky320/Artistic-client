@@ -165,7 +165,7 @@ const AddCraftsItem = () => {
                             <span className="label-text">Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="displayName" placeholder="Name"   value={formData.name} className="input input-bordered w-full" disabled />
+                            <input type="text" name="displayName" placeholder="Name"   value={formData.name} className="input input-bordered w-full" readOnly/>
                         </label>
                     </div>
                        <div className="form-control md:w-1/2 md:ml-4">
@@ -173,7 +173,7 @@ const AddCraftsItem = () => {
                             <span className="label-text">Email</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="email" placeholder="Email"   value={formData.email} className="input input-bordered w-full" disabled/>
+                            <input type="text" name="email" placeholder="Email"   value={formData.email} className="input input-bordered w-full" readOnly/>
                         </label>
                     </div>
                   

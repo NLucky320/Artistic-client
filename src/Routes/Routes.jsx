@@ -46,7 +46,7 @@ const router = createBrowserRouter([
         path: "/updateArt/:id",
         element: <PrivateRoute> <UpdateArt></UpdateArt></PrivateRoute>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/crafts/${params.id}`).then((res) =>
+          fetch(`https://assignment-10-server-liart-ten.vercel.app/crafts/${params.id}`).then((res) =>
             res.json()
           ),
       },

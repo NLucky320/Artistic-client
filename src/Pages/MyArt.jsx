@@ -5,10 +5,10 @@ import { FcRating } from "react-icons/fc";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 const MyArt = ({item}) => {
-    const { user } = useAuth() || {};
+ const { user } = useAuth() || {};
     const [items, setItems] = useState([]);
-    const [sortOption, setSortOption] = useState([]);
-    // console.log(user);
+    const [filterOption, setFilterOption] = useState('');
+
     useEffect(() => {
         fetch(`http://localhost:5000/myArt/${user?.email}`)
             .then((res) => res.json())
@@ -16,9 +16,15 @@ const MyArt = ({item}) => {
                 setItems(data);
             });
     }, [user]);
-    const handleSortChange = (e) => {
-        setSortOption(e.target.value);
-    }
+
+    const handleFilterChange = (e) => {
+        setFilterOption(e.target.value);
+    };
+
+    const filteredItems = filterOption
+        ? items.filter(item => item.customization.toLowerCase() === filterOption)
+        : items;
+
     const handleDelete = _id => {
         console.log(_id);
         Swal.fire({
@@ -64,19 +70,18 @@ const MyArt = ({item}) => {
                         customers from around the world.
                     </p>
                 </div>
-                <div className="py-14 text-center ">
-                    <select
-                        className=" px-8 py-3 bg-primary text-white rounded "
-                        onChange={handleSortChange}
-                        value={sortOption}
-                    >
-                        <option>Sort By Customization</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-       
-                    </select>
-                </div>
-                {items?.map((item) => (
+             <div className="py-14 text-center ">
+                <select
+                    className=" px-8 py-3 bg-primary text-white rounded "
+                    onChange={handleFilterChange}
+                    value={filterOption}
+                >
+                    <option value="">Show All</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+                {filteredItems?.map((item) => (
                     <div
                         key={item._id}
                         className="items-center max-w-xl mx-auto p-4 shadow-md dark:bg-gray-50 dark:text-gray-800 m-4"
