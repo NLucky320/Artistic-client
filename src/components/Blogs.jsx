@@ -9,7 +9,7 @@ const Blogs = () => {
       .then((res) => res.json())
       .then((data) => setBlogs(data));
     }, [])
-    console.log(blogs)
+    // console.log(blogs)
     return (
     <section className="dark:bg-gray-100 dark:text-gray-800">
 	<div className="p-6 mx-auto space-y-8">

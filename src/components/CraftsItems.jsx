@@ -9,7 +9,7 @@ const CraftsItems = () => {
       .then((res) => res.json())
       .then((data) => setCraftsItems(data));
     }, [])
-    console.log(craftsItems)
+    // console.log(craftsItems)
     return (
         <div>
              <div className="p-4 mt-12 md:mt-[80px] text-center"> 

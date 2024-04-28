@@ -36,7 +36,7 @@ const UpdateArt = () => {
         image
     };
 
-    fetch(`http://localhost:5000/crafts/${item._id}`, {
+    fetch(`https://assignment-10-server-liart-ten.vercel.app/crafts/${item._id}`, {
         method: 'PUT',
         headers: {
             'content-type': 'application/json'
@@ -84,7 +84,7 @@ const UpdateArt = () => {
                             <span className="label-text">Subcategory Name</span>
                         </label>
 
-<select className='input input-bordered w-full' name="subcategory_Name" defaultValue={item.subcategory_Name} >
+<select className='w-full' name="subcategory_Name" defaultValue={item.subcategory_Name} >
 
   <option value="Landscape Painting">Landscape Painting</option>
   <option value="Portrait Drawing">Portrait Drawing</option>

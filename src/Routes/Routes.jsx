@@ -11,6 +11,7 @@ import MyArt from "../Pages/MyArt";
 import UpdateArt from "../Pages/UpdateArt";
 import ViewDetails from "../Pages/ViewDetails";
 import PrivateRoute from '../components/PrivateRoute';
+import ArtSubcategory from "../Pages/ArtSubcategory";
 
 const router = createBrowserRouter([
   {
@@ -54,7 +55,7 @@ const router = createBrowserRouter([
         path: "/allArtsItems/viewDetails/:id",
         element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/crafts/${params.id}`).then((res) =>
+          fetch(`https://assignment-10-server-liart-ten.vercel.app/crafts/${params.id}`).then((res) =>
             res.json()
           ),
       },
@@ -62,10 +63,14 @@ const router = createBrowserRouter([
         path: "/viewDetails/:id",
         element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/crafts/${params.id}`).then((res) =>
+          fetch(`https://assignment-10-server-liart-ten.vercel.app/crafts/${params.id}`).then((res) =>
             res.json()
           ),
       },
+      {
+        path: "/subcategory/:subcategory_Name",
+        element: <PrivateRoute><ArtSubcategory></ArtSubcategory></PrivateRoute>,
+      }
     ],
   },
 ]);

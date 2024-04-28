@@ -10,7 +10,7 @@ const MyArt = ({item}) => {
     const [filterOption, setFilterOption] = useState('');
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myArt/${user?.email}`)
+        fetch(`https://assignment-10-server-liart-ten.vercel.app/myArt/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setItems(data);
@@ -76,7 +76,7 @@ const MyArt = ({item}) => {
                     onChange={handleFilterChange}
                     value={filterOption}
                 >
-                    <option value="">Show All</option>
+                    <option value="">Filter By Customization</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
