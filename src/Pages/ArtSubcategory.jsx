@@ -34,18 +34,20 @@ const ArtSubcategory = () => {
                             </div>
                             <div className="space-y-2">
                                 <h3 className="text-xl font-semibold dark:text-violet-600">
-                                    {item.item_Name}
+                                  Item:  {item.item_Name}
                                 </h3>
                             </div>
-                            <div className="flex justify-between items-start text-start pt-4 border-b border-dashed pb-2">
-                                <div className="text-[16px] text-[#181726]">
-                                    Stock Status: {item?.stockStatus}
-                                </div>
-
-                                <div className="text-[16px] text-[#181726]">
-                                    Customization: {item?.customization}
-                                </div>
+                            <div className="space-y-2">
+                                <h5 className=" font-semibold dark:text-violet-600">
+                                   Subcategory: {item.subcategory_Name}
+                                </h5>
                             </div>
+                            <div className="space-y-2">
+                                <p className="dark:text-violet-600">
+                                   Description: {item?.short_description}
+                                </p>
+                            </div>
+                               
                         </div>
                         <div className="flex justify-between items-start text-start pt-2 border-b border-dashed pb-2">
                             <div className="flex gap-2 items-start">
@@ -67,9 +69,11 @@ const ArtSubcategory = () => {
                             </div>
                         </div>
                         <div className="flex justify-between items-start text-start pt-4 pb-2">
-                           <Link to={`/updateArt/${item._id}`}> <button className="btn bg-primary text-white">Update</button></Link>
-                            <button onClick={() => handleDelete(item._id)} className="btn bg-primary text-white">Delete</button>
-                        </div>
+                             <div className="text-[16x] text-[#181726]">
+                                    Processing Time: {item?.processing_time}
+                                </div>
+                           <Link to={`/subcategory/viewDetails/${item._id}`}> <button className="btn bg-primary text-white">View Details</button></Link>
+                    </div>
                     </div>
                 ))}
         </div>

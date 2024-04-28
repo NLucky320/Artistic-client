@@ -68,6 +68,14 @@ const router = createBrowserRouter([
           ),
       },
       {
+        path: "/subcategory/viewDetails/:id",
+        element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
+        loader: ({ params }) =>
+          fetch(`https://assignment-10-server-liart-ten.vercel.app/crafts/${params.id}`).then((res) =>
+            res.json()
+          ),
+      },
+      {
         path: "/subcategory/:subcategory_Name",
         element: <PrivateRoute><ArtSubcategory></ArtSubcategory></PrivateRoute>,
       }

@@ -2,10 +2,12 @@ import React from 'react';
 import { IoPricetag } from "react-icons/io5";
 import { FcRating } from "react-icons/fc";
 import { useLoaderData } from 'react-router-dom';
+import { Fade, Slide } from 'react-awesome-reveal';
 const ViewDetails = () => {
     const craftsItem = useLoaderData();
     return (
-         <div
+        <Slide direction="up">
+             <div
                         key={craftsItem._id}
                         className="items-center max-w-xl mx-auto p-4 shadow-md dark:bg-gray-50 dark:text-gray-800 m-4 mt-12 md:mt-[80px]"
         >
@@ -70,6 +72,8 @@ const ViewDetails = () => {
                         </div>
     
                     </div>
+        </Slide>
+        
     );
 };
 

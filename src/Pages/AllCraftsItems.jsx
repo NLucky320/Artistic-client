@@ -12,7 +12,8 @@ const AllCraftsItems = () => {
   // console.log(craftsItems)
   return (
     <div className="bg-[#F4F3F0] mt-12 md:mt-[80px] p-6 md:p-16 text-center">
-      <div className="max-w-[700px] mx-auto">
+    
+         <div className="max-w-[700px] mx-auto">
         <h2 className="text-xl md:text-3xl font-extrabold pt-4">
           All Art Items
         </h2>
@@ -24,6 +25,7 @@ const AllCraftsItems = () => {
           customers from around the world.
         </p>
       </div>
+
       <table className="table">
         {/* head */}
         <thead>
