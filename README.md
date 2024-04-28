@@ -1,6 +1,8 @@
-# Craftopia Creations
+# Artistic
 
 ## Live Link
+
+https://golden-fenglisu-f29d2d.netlify.app/
 
 ### Features and Characteristics
 
@@ -13,7 +15,5 @@
 
 ### NPM packages that was used
 
-- [AOS Packages](https://michalsnik.github.io/aos/)
 - [React Hook Form](https://react-hook-form.com/)
 - [Swiper Slider](https://swiperjs.com/)
-- [React leaflet](https://react-leaflet.js.org/)
