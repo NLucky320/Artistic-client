@@ -4,6 +4,7 @@ import { IoPricetag } from "react-icons/io5";
 import { FcRating } from "react-icons/fc";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 const MyArt = ({item}) => {
  const { user } = useAuth() || {};
     const [items, setItems] = useState([]);
@@ -61,6 +62,9 @@ const MyArt = ({item}) => {
         };
         return (
             <div className=" mt-12 md:mt-[80px] p-6 md:p-16 text-center">
+                <Helmet>
+                        <title>Artistic | My Art</title>
+                    </Helmet>
                 <div className="max-w-[700px] mx-auto">
                     <h2 className="text-xl md:text-3xl font-extrabold pt-4">Art Item</h2>
                     <p className="py-4">

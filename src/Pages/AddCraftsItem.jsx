@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useAuth from "../Hooks/useAuth";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 const AddCraftsItem = () => {
   const { user } = useAuth();
   const [formData, setFormData] = useState({
@@ -72,6 +73,9 @@ const AddCraftsItem = () => {
   };
   return (
     <div className="bg-[#F4F3F0] mt-12 md:mt-[80px] p-6 md:p-16 text-center">
+      <Helmet>
+                        <title>Artistic | Add Crafts</title>
+                    </Helmet>
       <div className="max-w-[700px] mx-auto">
         <h2 className="text-xl md:text-3xl font-extrabold pt-4">
           Add Art Item

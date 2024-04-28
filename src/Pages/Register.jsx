@@ -44,7 +44,7 @@ const Register = () => {
                 <h2 className="text-2xl text-center pt-4">Please Register</h2>
             </div>
             <Helmet>
-                <title>Dream Dwellings | Register</title>
+                <title>Artistic | Register</title>
             </Helmet>
 
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">

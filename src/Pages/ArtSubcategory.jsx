@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { FcRating } from "react-icons/fc";
 
 import { Link, useParams } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
 const ArtSubcategory = () => {
     const { subcategory_Name } = useParams(); // Using useParams to get the subcategory name from the URL
     const [items, setItems] = useState([]);
@@ -19,6 +20,9 @@ const ArtSubcategory = () => {
     // console.log(items);
     return (
         <div>
+            <Helmet>
+                        <title>Artistic | Art Subcategory</title>
+                    </Helmet>
                 {items?.map((item) => (
                     <div
                         key={item._id}

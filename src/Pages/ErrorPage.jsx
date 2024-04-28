@@ -7,7 +7,7 @@ const ErrorPage = () => {
 	
 		<section className="flex items-center h-full p-16 dark:bg-gray-50 text-black">
 				<Helmet>
-              <title>Dream Dwellings | Error Page</title>  
+              <title>Artistic | Error Page</title>  
             </Helmet>
 	<div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
 				<div className="max-w-md text-center">

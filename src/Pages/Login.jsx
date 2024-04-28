@@ -48,7 +48,7 @@ const Login = () => {
             <div className="flex items-center w-full my-4">
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                     <Helmet>
-                        <title>Dream Dwellings | Login</title>
+                        <title>Artistic | Login</title>
                     </Helmet>
                     <div className="form-control">
                         <label className="label">
