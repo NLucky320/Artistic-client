@@ -2,7 +2,7 @@ import heroImg1 from "../assets/sketch.jpeg";
 import heroImg2 from "../assets/water.jpg";
 import heroImg3 from "../assets/image.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Fade } from "react-awesome-reveal";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -35,7 +35,7 @@ const Banner = () => {
                   Top Arts
                 </p>
 
-                <Fade cascade damping={0.1}>
+                
                    <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center md:text-left">
                   Art is the Future <br />
                   of Creativity
@@ -43,7 +43,7 @@ const Banner = () => {
                 <p className="font-medium text-black/60 md:text-lg text-center md:text-left">
                   Welcome to the Gateway of Tomorrow: Where Art Meets Innovation
                 </p>
-               </Fade>
+              
 
                 <div className="flex justify-center md:justify-start">
                   <button className="bg-primary py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-secondary">
@@ -78,7 +78,6 @@ const Banner = () => {
                   Top Arts
                 </p>
 
-                <Fade cascade>
                      <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center md:text-left">
                   Explore the Joy of <br />
                   Creating Art
@@ -86,7 +85,7 @@ const Banner = () => {
                 <p className="font-medium text-black/60 md:text-lg text-center md:text-left">
                   Unlock Your Creative Potential: Experience the Joy of Artistry
                 </p>
-             </Fade>
+            
 
                 <div className="flex justify-center md:justify-start">
                   <button className="bg-primary py-2 mt-5 px-3 rounded text-white font-semibold hover:bg-secondary">

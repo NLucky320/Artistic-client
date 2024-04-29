@@ -1,17 +1,20 @@
 # Artistic
 
+-[Painting and Drawing Website](https://golden-fenglisu-f29d2d.netlify.app)
+
 ## Live Link
 
-https://golden-fenglisu-f29d2d.netlify.app/
+https://golden-fenglisu-f29d2d.netlify.app
+https://assignment-10-d476b.web.app
 
 ### Features and Characteristics
 
-- Use of the useEffect hook for fetching data from an API
-- Efficient state updating within arrays and parameter passing
-- Integration of toast notifications for successful operations and error messages
-- Dynamic routes using React Router for navigation flexibility
-- Integration of private route
-- Firebase Authentication
+- Private Route Handling
+- Search Functionality
+- Loading Spinner
+- Responsive Design
+- Dark/Light Theme Toggle
+- User Authentication
 
 ### NPM packages that was used
 

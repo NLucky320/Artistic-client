@@ -17,7 +17,6 @@ const MyArt = ({item}) => {
                 setItems(data);
             });
     }, [user]);
-
     const handleFilterChange = (e) => {
         setFilterOption(e.target.value);
     };
@@ -25,6 +24,7 @@ const MyArt = ({item}) => {
     const filteredItems = filterOption
         ? items.filter(item => item.customization.toLowerCase() === filterOption)
         : items;
+
 
     const handleDelete = _id => {
         console.log(_id);
@@ -39,7 +39,7 @@ const MyArt = ({item}) => {
         })
             .then(result => {
                 if (result.isConfirmed) {
-                    fetch(`http://localhost:5000/crafts/${_id}`, {
+                    fetch(`https://assignment-10-server-liart-ten.vercel.app/crafts/${_id}`, {
                         method: 'DELETE'
                     })
                         .then(res => res.json())
