@@ -88,7 +88,7 @@ const UpdateArt = () => {
                             <span className="label-text">Subcategory Name</span>
                         </label>
 
-<select className='w-full' name="subcategory_Name" defaultValue={item.subcategory_Name} >
+<select className='w-full p-4 border-solid rounded-lg ' name="subcategory_Name" defaultValue={item.subcategory_Name} >
 
   <option value="Landscape Painting">Landscape Painting</option>
   <option value="Portrait Drawing">Portrait Drawing</option>
@@ -145,7 +145,7 @@ const UpdateArt = () => {
                             <span className="label-text">Customization</span>
                         </label>
 
-<select className='input input-bordered w-full' name="customization" defaultValue={item.customization} >
+<select className='p-4 border-solid rounded-lg  w-full' name="customization" defaultValue={item.customization} >
 
   <option value="Yes">Yes</option>
   <option value="No">No</option>
@@ -157,7 +157,7 @@ const UpdateArt = () => {
                             <span className="label-text">Stock Status</span>
                         </label>
 
-<select className='input input-bordered w-full' name="stockStatus" defaultValue={item.stockStatus} >
+<select className='p-4 border-solid rounded-lg  w-full' name="stockStatus" defaultValue={item.stockStatus} >
  
   <option value="In Stock">In Stock</option>
   <option value="Made to Order">Made to Order</option>

@@ -20,3 +20,5 @@ https://assignment-10-d476b.web.app
 
 - [React Hook Form](https://react-hook-form.com/)
 - [Swiper Slider](https://swiperjs.com/)
+- [React Tooltip](https://react-tooltip.com/)
+- [Lottie React](https://www.npmjs.com/package/lottie-react)

@@ -10,7 +10,7 @@ import useAuth from "../Hooks/useAuth";
 import logo from "../assets/palette.png";
 import logo1 from "../assets/artist-svgrepo-com.svg";
 
-import { Tooltip } from 'react-tooltip'
+import { Tooltip } from "react-tooltip";
 const Nav = () => {
   const [theme, setTheme] = useState("light");
 
@@ -119,29 +119,36 @@ const Nav = () => {
     <div className="-m-6 max-h-[768px] w-[calc(100%+48px)]">
       <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
         <div className="flex items-center justify-between text-blue-gray-900">
-          
           <div className="flex items-center justify-center">
             <div className="w-16 h-16 md:w-12 md:h-12 rounded-full dark:bg-violet-600">
-            <img src={logo} alt="" />
+              <img src={logo} alt="" />
+            </div>
+            <Typography
+              as="a"
+              href="#"
+              className="mr-4 cursor-pointer py-1.5 font-bold pl-6 text-xl text-primary"
+            >
+              Artistic
+            </Typography>
           </div>
-             <Typography
-            as="a"
-            href="#"
-            className="mr-4 cursor-pointer py-1.5 font-bold pl-6 text-xl text-primary"
-          >
-        Artistic
-          </Typography>
-         </div>
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
             {user ? (
-              <div className="dropdown dropdown-hover">
-                <label tabIndex={0} className="btn btn-circle avatar ">
-                  <div className="w-12 rounded-full">
-                    <img src={user?.photoURL || ""} className="" />
-                  </div>
-                </label>
-                <ul
+              <div className="">
+                <a
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content={
+                    user?.displayName || "user name not found"
+                  }
+                >
+                  <label tabIndex={0} className="btn btn-circle avatar ">
+                    <div className="w-12 rounded-full">
+                      <img src={user?.photoURL || ""} className="" />
+                    </div>
+                  </label>
+                </a>
+                <Tooltip id="my-tooltip" />
+                {/* <ul
                   tabIndex={0}
                   className="menu menu-sm dropdown-content mt-1 z-[1] pr-10 mr-4 rounded-box w-52"
                 >
@@ -150,7 +157,7 @@ const Nav = () => {
                       {user?.displayName || "user name not found"}
                     </button>
                   </li>
-                </ul>
+                </ul> */}
               </div>
             ) : (
               <button></button>
