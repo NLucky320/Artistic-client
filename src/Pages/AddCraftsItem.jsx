@@ -72,20 +72,17 @@ const AddCraftsItem = () => {
       });
   };
   return (
-    <div className="bg-[#F4F3F0] mt-12 md:mt-[80px] p-6 md:p-16 text-center">
+    <div className="bg-[#F4F3F0] mt-12 md:mt-[80px] p-6 md:p-16 text-center ">
       <Helmet>
                         <title>Artistic | Add Crafts</title>
                     </Helmet>
-      <div className="max-w-[700px] mx-auto">
-        <h2 className="text-xl md:text-3xl font-extrabold pt-4">
+      <div className="max-w-[800px] mx-auto text-black">
+        <h2 className="font-bold text-[28px] md:text-[40px] pt-4">
           Add Art Item
         </h2>
         <p className="py-4">
           {" "}
-          Our platform attracts a diverse audience of art enthusiasts,
-          collectors, and shoppers seeking one-of-a-kind handmade treasures. By
-          listing your craft item with us, you will gain exposure to potential
-          customers from around the world.
+        Enhance your artistic collection with our 'Add Art Item' feature! Whether you're an established connoisseur or just beginning your journey as an art enthusiast, this tool empowers you to expand your repertoire and curate your own gallery with ease.
         </p>
       </div>
       <form onSubmit={handleAddCraftItem}>

@@ -2,8 +2,8 @@ import React from 'react';
 
 const Blog = ({blog}) => {
     return (
-      <article className="flex flex-col bg-[#F7F4EF] dark:bg-gray-50">
-					<img alt="" className="object-cover w-full h-52 p-4 dark:bg-gray-500" src={blog.image} />
+      <article className="flex flex-col bg-[#F7F4EF] text-black">
+					<img alt="" className="object-cover w-full h-52 p-4" src={blog.image} />
 				
 				<div className="flex flex-col flex-1 p-6">
                 <a rel="noopener noreferrer" href="#" className="text-xs tracking-wider uppercase hover:underline dark:text-violet-600">{ blog.name}</a>

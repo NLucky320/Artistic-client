@@ -9,7 +9,8 @@ import "swiper/css/effect-fade";
 import { Autoplay, EffectFade } from "swiper/modules";
 const Banner = () => {
   return (
-    <div className="craftContainer lg:h-[600px]  bg-gradient-to-r from-[#F9F3F0] from-10% via-[#FCE7DC] via-30% to-[#F9F3F0] to-90% dark:bg-gradient-to-r dark:from-[#f2f2d8] dark:from-10% dark:via-[#FCE7DC] dark:via-30% dark:to-[#fae1d4]">
+ <div className="craftContainer lg:h-[600px] bg-gradient-to-r from-[#F9F3F0] via-[#FCE7DC] to-[#F9F3F0] dark:bg-gradient-to-r dark:from-[#203E75] dark:via-[#3F4C77] dark:to-[#203E75]">
+
       <Swiper
         effect={"fade"}
         fadeEffect={{ crossFade: true }}
@@ -36,11 +37,11 @@ const Banner = () => {
                 </p>
 
                 
-                   <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center md:text-left">
+                   <p className="md:text-[40px] text-[28px] font-bold text-black text-center md:text-left">
                   Art is the Future <br />
                   of Creativity
                 </p>
-                <p className="font-medium text-black/60 md:text-lg text-center md:text-left">
+                <p className="font-medium text-black md:text-lg text-center md:text-left">
                   Welcome to the Gateway of Tomorrow: Where Art Meets Innovation
                 </p>
               
@@ -78,11 +79,11 @@ const Banner = () => {
                   Top Arts
                 </p>
 
-                     <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center md:text-left">
+                     <p className="md:text-[40px] text-[28px] font-bold text-black text-center md:text-left">
                   Explore the Joy of <br />
                   Creating Art
                 </p>
-                <p className="font-medium text-black/60 md:text-lg text-center md:text-left">
+                <p className="font-medium text-black md:text-lg text-center md:text-left">
                   Unlock Your Creative Potential: Experience the Joy of Artistry
                 </p>
             
@@ -120,11 +121,11 @@ const Banner = () => {
                   Top Arts
                 </p>
 
-                <p className="xl:text-[50px] lg:text-[40px] md:text-[32px] text-[30px] font-bold text-center md:text-left">
-                  Crafting Beauty from
-                  <br /> Simplicity
+                <p className="md:text-[40px] text-[28px] font-bold text-black text-center md:text-left">
+                  Crafting Beauty  <br />from
+                  Simplicity
                 </p>
-                <p className="font-medium text-black/60 md:text-lg text-center md:text-left">
+                <p className="font-medium md:text-lg text-black text-center md:text-left">
                   Simplicity: Where Elegance Meets Essence
                 </p>
 

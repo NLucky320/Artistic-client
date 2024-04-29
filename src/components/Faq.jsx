@@ -10,7 +10,7 @@ const Faq = () => {
         <p className="p-2 text-sm font-medium tracking-wider text-center uppercase">
           How it works
         </p>
-        <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">
+        <h2 className="mb-12 md:text-[40px] text-[28px] font-bold leading-none text-center sm:text-5xl">
           Frequently Asked Questions
         </h2>
         <div className="flex flex-col-reverse lg:flex-row gap-8 p-4">
@@ -46,7 +46,7 @@ const Faq = () => {
               </div>
             </div>
           </div>
-          <div className="w-[350px] mx-auto">
+          <div className="w-[300px] md:w-[350px] mx-auto">
             <Lottie animationData={faq} />
           </div>
         </div>

@@ -13,8 +13,8 @@ const ArtCategories = () => {
           <div>
              <div className="p-4 mt-12 md:mt-[80px] text-center"> 
                 <div className='max-w-[700px] mx-auto pb-6'>
-                    <h2 className="font-bold text-[40px] pb-6">Art and Craft Categories</h2>
-                <p>Welcome to our vibrant online space dedicated to celebrating the beauty and creativity of art and craft! </p>
+                    <h2 className="font-bold text-[28px] md:text-[36px] pb-6">Discover Our Art and Craft Categories</h2>
+                <p>Step into a world where creativity knows no bounds! Discover our vast array of art and craft categories, each offering a unique opportunity to explore your imagination and bring your ideas to life </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                      {

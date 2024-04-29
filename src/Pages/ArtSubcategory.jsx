@@ -1,20 +1,28 @@
-import React, { useEffect, useState } from 'react';
- import { IoPricetag } from "react-icons/io5";
-import { FcRating } from "react-icons/fc";
-
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
+
+import { useEffect, useState } from "react";
+import Loading from "../components/Loading";
+import { IoPricetag } from "react-icons/io5";
+import { FcRating } from "react-icons/fc";
+
 const ArtSubcategory = () => {
-    const { subcategory_Name } = useParams(); // Using useParams to get the subcategory name from the URL
+    const { subcategory_Name } = useParams();
     const [items, setItems] = useState([]);
-   
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
+        setLoading(true); // Set loading to true before fetching data
         fetch(`https://assignment-10-server-liart-ten.vercel.app/subcategory/${subcategory_Name}`)
             .then((res) => res.json())
             .then((data) => {
                 setItems(data);
+                setLoading(false); // Set loading to false after data is fetched
             })
-            .catch(error => console.error('Error fetching subcategory data:', error)); // Adding error handling
+            .catch(error => {
+                console.error('Error fetching subcategory data:', error);
+                setLoading(false); // Set loading to false if there's an error
+            });
     }, [subcategory_Name]); // Adding subcategory_Name to the dependency array
     
     // console.log(items);
@@ -23,10 +31,11 @@ const ArtSubcategory = () => {
             <Helmet>
                         <title>Artistic | Art Subcategory</title>
                     </Helmet>
-                {items?.map((item) => (
+            {
+                loading? <Loading></Loading>:     (items?.map((item) => (
                     <div
                         key={item._id}
-                        className="items-center max-w-xl mx-auto p-4 shadow-md dark:bg-gray-50 dark:text-gray-800 m-4"
+                        className="items-center max-w-xl mt-12 md:mt-[80px] mx-auto p-4 shadow-md dark:bg-gray-50 dark:text-gray-800 m-4"
                     >
                         <div className="space-y-4 p-4">
                             <div>
@@ -58,7 +67,7 @@ const ArtSubcategory = () => {
                                 <div className="text-xl">
                                     <IoPricetag />
                                 </div>
-                                <div className="text-[16px] text-[#181726]">
+                                <div className="text-[16px] ">
                                     Price: {item?.price}$
                                 </div>
                             </div>
@@ -67,19 +76,20 @@ const ArtSubcategory = () => {
                                 <div className="text-xl">
                                     <FcRating />
                                 </div>
-                                <div className="text-[16px] text-[#181726]">
+                                <div className="text-[16px] ">
                                     Rating: {item?.rating}
                                 </div>
                             </div>
                         </div>
                         <div className="flex justify-between items-start text-start pt-4 pb-2">
-                             <div className="text-[16x] text-[#181726]">
+                             <div className="text-[16x] ">
                                     Processing Time: {item?.processing_time}
                                 </div>
                            <Link to={`/subcategory/viewDetails/${item._id}`}> <button className="btn bg-primary text-white">View Details</button></Link>
                     </div>
                     </div>
-                ))}
+                )))
+            }
         </div>
     );
 };

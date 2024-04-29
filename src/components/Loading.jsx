@@ -1,5 +1,4 @@
 
-
 const Loading = () => {
     return (
         <div className='pt-12 text-center items-center'>

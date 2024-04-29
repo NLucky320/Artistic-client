@@ -12,20 +12,19 @@ import logo1 from "../assets/artist-svgrepo-com.svg";
 
 import { Tooltip } from "react-tooltip";
 const Nav = () => {
-  const [theme, setTheme] = useState("light");
+  const storedTheme = localStorage.getItem("theme");
+  const [theme, setTheme] = useState(storedTheme || "light");
 
   useEffect(() => {
+    // Update local storage whenever theme changes
     localStorage.setItem("theme", theme);
-    const localTheme = localStorage.getItem("theme");
-    document.querySelector("html").setAttribute("data-theme", localTheme);
+    // Apply the theme to the HTML element
+    document.querySelector("html").setAttribute("data-theme", theme);
   }, [theme]);
 
-  const handleToggle = (e) => {
-    if (e.target.checked) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
+ const handleToggle = () => {
+    // Toggle between "light" and "dark" themes
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
   // console.log(theme);
   const { logOut, user } = useAuth();
@@ -120,7 +119,7 @@ const Nav = () => {
       <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
         <div className="flex items-center justify-between text-blue-gray-900">
           <div className="flex items-center justify-center">
-            <div className="w-16 h-16 md:w-12 md:h-12 rounded-full dark:bg-violet-600">
+            <div className="w-16 h-16 md:w-12 md:h-12 rounded-full dark:bg-violet-600 hidden md:block">
               <img src={logo} alt="" />
             </div>
             <Typography
@@ -186,7 +185,7 @@ const Nav = () => {
               </div>
             )}
 
-            <label className="cursor-pointer grid place-items-center">
+            <label className="cursor-pointer place-items-center hidden md:grid ">
               <input
                 type="checkbox"
                 checked={theme === "dark"} // Check if the theme is "dark"

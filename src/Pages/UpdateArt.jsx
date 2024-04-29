@@ -66,13 +66,13 @@ const UpdateArt = () => {
   };
 
   return (
-    <div className="bg-[#F4F3F0] mt-12 md:mt-[80px] p-6 md:p-16 text-center">
+    <div className="bg-gradient-to-r from-[#F9F3F0] via-[#FCE7DC] to-[#F9F3F0] mt-12 md:mt-[80px] p-6 text-center">
       <Helmet>
         <title>Artistic | Update Art</title>
       </Helmet>
 
-      <div className="max-w-[700px] mx-auto">
-        <h2 className="text-xl md:text-3xl font-extrabold pt-4">
+      <div className="max-w-[800px] mx-auto text-black">
+        <h2 className=" md:text-[40px] text-[28px] font-bold pt-4">
           Update Art Item
         </h2>
         <p className="py-4">

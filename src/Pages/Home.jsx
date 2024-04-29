@@ -9,7 +9,7 @@ import Faq from '../components/Faq';
 
 const Home = () => {
     return (
-        <div className='mt-16 mx-2'>
+        <div className='mt-16 mx-2 font-poppins'>
             <Helmet>
               <title>Artistic | Home</title>  
             </Helmet>

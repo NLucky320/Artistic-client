@@ -5,18 +5,22 @@ import { FcRating } from "react-icons/fc";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import Loading from "../components/Loading";
 
 
 const MyArt = ({item}) => {
  const { user } = useAuth() || {};
     const [items, setItems] = useState([]);
     const [filterOption, setFilterOption] = useState('');
+       const [loading, setLoading]=useState(true)
 
     useEffect(() => {
+        setLoading(true)
         fetch(`https://assignment-10-server-liart-ten.vercel.app/myArt/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setItems(data);
+                    setLoading(false)
             });
     }, [user]);
     const handleFilterChange = (e) => {
@@ -63,12 +67,12 @@ const MyArt = ({item}) => {
        
         };
         return (
-            <div className=" mt-12 md:mt-[80px] p-6 md:p-16 text-center">
+            <div className=" mt-12 md:mt-[80px] p-6 text-center">
                 <Helmet>
                         <title>Artistic | My Art</title>
                     </Helmet>
-                <div className="max-w-[700px] mx-auto">
-                    <h2 className="text-xl md:text-3xl font-extrabold pt-4">Art Item</h2>
+                <div className="max-w-[800px] mx-auto">
+                    <h2 className="font-bold text-[28px] md:text-[40px] pt-4">Art Item</h2>
                     <p className="py-4">
                         Our platform attracts a diverse audience of art enthusiasts,
                         collectors, and shoppers seeking one-of-a-kind handmade treasures. By
@@ -87,17 +91,18 @@ const MyArt = ({item}) => {
                     <option value="no">No</option>
                 </select>
             </div>
-                {filteredItems?.map((item) => (
+                {
+                    loading ? <Loading></Loading>:    (filteredItems?.map((item) => (
                     <div
                         key={item._id}
-                        className="items-center max-w-xl mx-auto p-4 shadow-md dark:bg-gray-50 dark:text-gray-800 m-4"
+                        className="items-center max-w-[600px] mx-auto p-4 shadow-md  m-4"
                     >
                         <div className="space-y-4 p-4">
                             <div>
                                 <img
                                     src={item?.image}
                                     alt=""
-                                    className="block object-cover object-center w-full rounded-md h-72 dark:bg-gray-500"
+                                    className="block object-cover object-center w-full rounded-md h-72 "
                                 />
                             </div>
                             <div className="space-y-2">
@@ -106,11 +111,11 @@ const MyArt = ({item}) => {
                                 </h3>
                             </div>
                             <div className="flex justify-between items-start text-start pt-4 border-b border-dashed pb-2">
-                                <div className="text-[16px] text-[#181726]">
+                                <div className="text-[16px] ">
                                     Stock Status: {item?.stockStatus}
                                 </div>
 
-                                <div className="text-[16px] text-[#181726]">
+                                <div className="text-[16px] ">
                                     Customization: {item?.customization}
                                 </div>
                             </div>
@@ -120,7 +125,7 @@ const MyArt = ({item}) => {
                                 <div className="text-xl">
                                     <IoPricetag />
                                 </div>
-                                <div className="text-[16px] text-[#181726]">
+                                <div className="text-[16px] ">
                                     Price: {item?.price}$
                                 </div>
                             </div>
@@ -129,7 +134,7 @@ const MyArt = ({item}) => {
                                 <div className="text-xl">
                                     <FcRating />
                                 </div>
-                                <div className="text-[16px] text-[#181726]">
+                                <div className="text-[16px] ">
                                     Rating: {item?.rating}
                                 </div>
                             </div>
@@ -139,7 +144,8 @@ const MyArt = ({item}) => {
                             <button onClick={() => handleDelete(item._id)} className="btn bg-primary text-white">Delete</button>
                         </div>
                     </div>
-                ))}
+                )))
+             }
             </div>
         );
     };
