@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateArt = () => {
@@ -230,11 +230,13 @@ const UpdateArt = () => {
             </label>
           </div>
         </div>
-        <input
+     
+            <input 
           type="submit"
           value="Update Art"
           className="btn btn-block bg-primary text-white"
         />
+        
       </form>
     </div>
   );

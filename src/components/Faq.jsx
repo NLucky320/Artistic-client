@@ -5,7 +5,7 @@ import Lottie from "lottie-react";
 
 const Faq = () => {
   return (
-    <div className=' dark:bg-gray-100 dark:text-gray-800"'>
+    <div className='mt-12 md:mt-[80px] p-4 '>
       <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
         <p className="p-2 text-sm font-medium tracking-wider text-center uppercase">
           How it works

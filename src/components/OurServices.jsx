@@ -5,8 +5,8 @@ import { PiPhoneCall } from "react-icons/pi";
 import { MdPayments } from "react-icons/md";
 const OurServices = () => {
   return (
-    <div className="p-6 md:my-[50px] text-black  md:py-[20px] lg:my-[90px] bg-gradient-to-r from-[#F9F3F0] via-[#FCE7DC] to-[#F9F3F0] ">
-      <div className="max-w-[700px]  mx-auto text-center">
+    <div className="mt-12 md:mt-[80px] p-4 text-black bg-gradient-to-r from-[#F9F3F0] via-[#FCE7DC] to-[#F9F3F0] ">
+      <div className="max-w-[800px]  mx-auto text-center">
         <h2 className="font-bold md:text-[40px] text-[28px] pb-6">
           Our Services
         </h2>
