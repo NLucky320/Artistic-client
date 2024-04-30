@@ -17,7 +17,7 @@ const AllCraftsItems = () => {
   }, []);
 
   return (
-    <div className="mt-12 md:mt-[80px] p-6 md:p-16 text-center">
+    <div className="mt-12 md:mt-[80px] p-6 text-center">
       <Helmet>
         <title>Artistic | All Crafts</title>
       </Helmet>
