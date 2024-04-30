@@ -146,7 +146,7 @@ const Nav = () => {
             </Typography>
           </div>
           <div className="flex items-center gap-4">
-            <div className="mr-4 hidden lg:block">{navList}</div>
+            <div className="md:mr-4 hidden lg:block">{navList}</div>
             {user ? (
               <div className="">
                 <a
