@@ -39,8 +39,8 @@ const AllCraftsItems = () => {
         <thead>
           <tr>
             <th></th>
-            <th className="hidden md:block">Image</th>
-            <th className="">Subcategory Name</th>
+            <th >Image</th>
+            <th >Subcategory Name</th>
             <th>Item Name</th>
             <th>Price</th>
             <th></th>
@@ -58,12 +58,12 @@ const AllCraftsItems = () => {
             craftsItems.map((craftsItem, index) => (
               <tr key={index}>
                 <td>{index + 1}</td>
-                <td className="hidden md:block">
+                <td>
                   <div className="mask mask-squircle w-12 h-12 ">
                     <img src={craftsItem.image} alt="image" />
                   </div>
                 </td>
-                <td className="">{craftsItem.subcategory_Name}</td>
+                <td >{craftsItem.subcategory_Name}</td>
                 <td> {craftsItem.item_Name}</td>
                 <td> {craftsItem.price}</td>
                 <td>

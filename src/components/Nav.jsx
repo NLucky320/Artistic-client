@@ -8,7 +8,7 @@ import {
 import { Link, NavLink, Navigate } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import logo from "../assets/palette.png";
-import logo1 from "../assets/artist-svgrepo-com.svg";
+
 
 import { Tooltip } from "react-tooltip";
 const Nav = () => {
@@ -111,6 +111,21 @@ const Nav = () => {
           My Art
         </NavLink>
       </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <NavLink
+          to="/contactUs"
+          className={({ isActive }) =>
+            isActive ? "text-primary font-bold" : "font-bold"
+          }
+        >
+          Contact Us
+        </NavLink>
+      </Typography>
     </ul>
   );
 
@@ -185,7 +200,7 @@ const Nav = () => {
               </div>
             )}
 
-            <label className="cursor-pointer place-items-center hidden md:grid ">
+            <label className="cursor-pointer place-items-center grid ">
               <input
                 type="checkbox"
                 checked={theme === "dark"} // Check if the theme is "dark"

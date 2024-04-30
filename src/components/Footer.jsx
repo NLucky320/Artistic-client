@@ -48,7 +48,7 @@ const Footer = () => {
 						<a rel="noopener noreferrer" href="#">About us</a>
 					</li>
 					<li>
-						<a rel="noopener noreferrer" href="#">Contact</a>
+						<a rel="noopener noreferrer" href="/contactUs">Contact</a>
 					</li>
 				</ul>
 			</div>

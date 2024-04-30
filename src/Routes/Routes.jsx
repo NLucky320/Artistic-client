@@ -12,6 +12,7 @@ import UpdateArt from "../Pages/UpdateArt";
 import ViewDetails from "../Pages/ViewDetails";
 import PrivateRoute from '../components/PrivateRoute';
 import ArtSubcategory from "../Pages/ArtSubcategory";
+import ContactUs from "../Pages/ContactUs";
 
 const router = createBrowserRouter([
   {
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
       {
         path: "/subcategory/:subcategory_Name",
         element: <PrivateRoute><ArtSubcategory></ArtSubcategory></PrivateRoute>,
+      },
+      {
+        path: "/contactUs",
+        element: <ContactUs></ContactUs>
       }
     ],
   },
