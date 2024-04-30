@@ -72,7 +72,7 @@ const AddCraftsItem = () => {
       });
   };
   return (
-    <div className="bg-[#F4F3F0] mt-12 md:mt-[80px] p-6 md:p-16 text-center ">
+    <div className=" bg-gradient-to-r from-[#F9F3F0] via-[#FCE7DC] to-[#F9F3F0] mt-12 md:mt-[80px] p-6 text-center ">
       <Helmet>
                         <title>Artistic | Add Crafts</title>
                     </Helmet>
