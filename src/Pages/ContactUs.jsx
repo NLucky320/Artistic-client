@@ -1,9 +1,13 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const ContactUs = () => {
   return (
     <section className="py-8 mt-12 md:mt-[80px] text-black  bg-gradient-to-r from-[#F9F3F0] via-[#FCE7DC] to-[#F9F3F0]">
-      <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
+          <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
+                   <Helmet>
+        <title>Artistic | Contact Us</title>
+      </Helmet>
         <div className="py-6 md:py-0 md:px-6">
           <h1 className="text-4xl font-bold">Get in touch</h1>
           <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
