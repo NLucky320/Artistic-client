@@ -140,7 +140,7 @@ const Nav = () => {
             <Typography
               as="a"
               href="#"
-              className="mr-4 cursor-pointer py-1.5 font-bold pl-6 text-xl text-primary"
+              className="mr-4 cursor-pointer py-1.5 font-bold pl-2 md:pl-6 text-xl text-primary"
             >
               Artistic
             </Typography>
