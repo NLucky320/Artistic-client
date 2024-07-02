@@ -31,6 +31,6 @@ https://assignment-10-d476b.web.app
   
 #### To run the repository in your local computer please follow the steps below
 - Open your terminal or command prompt.
-- Run the following command with your project repository URL: <pre>`git clone https://github.com/NLucky320/assignment-ten-client`</pre> 
+- Run the following command with your project repository URL: <pre>`git clone https://github.com/NLucky320/Artistic-client`</pre> 
 - Install Dependencies in your project directory:  <pre>`npm install`</pre>
 - Run the Project: <pre>`npm run dev`</pre> 
