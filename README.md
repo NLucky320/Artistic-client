@@ -1,7 +1,7 @@
 # Artistic
 
 -[Painting and Drawing Website](https://golden-fenglisu-f29d2d.netlify.app)
-
+The Painting and Drawing Website is a platform designed for art enthusiasts to share, discover, and interact with artwork. This website caters to both amateur and professional artists, offering a space to showcase their creations, connect with a community, and engage in art-centric activities.
 ## Live Link
 
 https://golden-fenglisu-f29d2d.netlify.app
