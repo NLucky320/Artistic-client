@@ -28,7 +28,7 @@ https://assignment-10-d476b.web.app
 - [Swiper Slider](https://swiperjs.com/)
 - [React Tooltip](https://react-tooltip.com/)
 - [Lottie React](https://www.npmjs.com/package/lottie-react)
-- 
+  
 #### To run the repository in your local computer please follow the steps below
 - Open your terminal or command prompt.
 - Run the following command with your project repository URL: <pre>`git clone https://github.com/NLucky320/assignment-ten-client`</pre> 
