@@ -10,13 +10,18 @@ https://assignment-10-d476b.web.app
 
 ### Features and Characteristics
 
-- Private Route Handling
-- Search Functionality
-- Loading Spinner
-- Responsive Design
-- Dark/Light Theme Toggle
-- User Authentication
+- Context API: Utilizes React Context API for managing global state and data across components.
+- Sort By: Implements functionality to sort data based on specified criteria.
+- Mobile and Tablet Responsive: Ensures responsive design and layout for optimal viewing experience on mobile and tablet devices.
+- Private Routes: Secures routes that require authentication by implementing private routes.
 
+### Technologies Used 
+
+- MongoDB: Employs MongoDB for flexible and scalable data storage.
+- Express.js: Utilizes Express.js for streamlined server-side development.
+- Node.js: Leverages Node.js for scalable and high-performance server applications.
+- Firebase: Integrates Firebase Authentication for user authentication and authorization.
+  
 ### NPM packages that was used
 
 - [React Hook Form](https://react-hook-form.com/)
